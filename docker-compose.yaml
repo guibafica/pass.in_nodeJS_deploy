@@ -5,6 +5,12 @@ services:
     image: postgres:16.2-alpine3.19
     ports:
       - 5432:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=passin
+    networks:
+      - passin
 
   api-pass-in:
     build:
@@ -13,5 +19,13 @@ services:
     ports:
       - 3001:3333
     environment:
-      - DATABASE_URL=file:./db.sqlite
+      - DATABASE_URL=postgresql://admin:admin@postgres:5432/passin
       - API_BASE_URL=http://localhost:3333
+    depends_on:
+      - postgres
+    networks:
+      - passin
+
+networks:
+  passin:
+    driver: bridge
