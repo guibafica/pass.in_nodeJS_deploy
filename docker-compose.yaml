@@ -3,6 +3,7 @@ version: "3.7"
 services:
   postgres:
     image: postgres:16.2-alpine3.19
+    container_name: db-pass-in
     ports:
       - 5432:5432
     environment:
