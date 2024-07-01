@@ -7,8 +7,8 @@ on:
 
 jobs:
   build-and-push:
-    name: "Build and Push"
-    run-on: ubuntu-latest
+    name: 'Build and push'
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
