@@ -21,4 +21,4 @@ jobs:
           echo "sha=$SHA" >> $GITHUB_OUTPUT
 
       - name: Build docker image
-        run: docker build -t guibafica/pass.in_nodeJS_deploy:${{ steps.generate_sha.outputs.sha }} .
+        run: docker build -t guibafica/pass.in_nodejs_deploy:${{ steps.generate_sha.outputs.sha }} .
