@@ -112,17 +112,29 @@ CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
 
 Node version used: v20.9.0
 
-<!-- ## Application
+## Application
 
 ```bash
 # To install project dependencies
 yarn
 ```
 
+- Create a .env file, using the .env.example as example.
+
+- Create a local postgresql DB.
+
 ```bash
-# Run the application on localhost -> http://localhost:5173
+yarn prisma generate
+```
+
+```bash
+yarn db:migrate
+```
+
+```bash
+# Run the application on localhost -> http://localhost:3333
 yarn dev
-``` -->
+```
 
 # Author
 
