@@ -1,47 +1,48 @@
-# pass.in
+<h1 align="center">Pass In - DevOps</h1>
 
-O pass.in é uma aplicação de **gestão de participantes em eventos presenciais**. 
+## About this Project
 
-A ferramenta permite que o organizador cadastre um evento e abra uma página pública de inscrição.
+pass.in is an application for **managing participants in in-person events**.
 
-Os participantes inscritos podem emitir uma credencial para check-in no dia do evento.
+The tool allows the organizer to register an event and open a public registration page. Registered participants can issue a credential for check-in on the day of the event.
+The system will scan the participant's credentials to allow entry to the event.
 
-O sistema fará um scan da credencial do participante para permitir a entrada no evento.
+## Functionalities
 
-## Requisitos
+### Functional requirements
 
-### Requisitos funcionais
+- [x] The organizer must be able to register a new event;
+- [x] The organizer must be able to view event data;
+- [x] The organizer must be able to view the list of participants;
+- [x] The participant must be able to register for an event;
+- [x] The participant must be able to view their registration badge;
+- [x] The participant must be able to check-in at the event;
 
-- [x] O organizador deve poder cadastrar um novo evento;
-- [x] O organizador deve poder visualizar dados de um evento;
-- [x] O organizador deve poser visualizar a lista de participantes; 
-- [x] O participante deve poder se inscrever em um evento;
-- [x] O participante deve poder visualizar seu crachá de inscrição;
-- [x] O participante deve poder realizar check-in no evento;
+### Business rules
 
-### Regras de negócio
+- [x] The participant can only register for an event once;
+- [x] Participants can only register for events with available places;
+- [x] The participant can only check-in to an event once;
 
-- [x] O participante só pode se inscrever em um evento uma única vez;
-- [x] O participante só pode se inscrever em eventos com vagas disponíveis;
-- [x] O participante só pode realizar check-in em um evento uma única vez;
+### Non-functional requirements
 
-### Requisitos não-funcionais
+- [x] Check-in at the event will be carried out using a QRCode;
 
-- [x] O check-in no evento será realizado através de um QRCode;
+## API Documentation (Swagger)
 
-## Documentação da API (Swagger)
+For API documentation, visit the [link](https://nlw-unite-nodejs.onrender.com/docs).
 
-Para documentação da API, acesse o link: https://nlw-unite-nodejs.onrender.com/docs
+## Database
 
-## Banco de dados
+In this application we will use a relational database (SQL). For the development environment, we will continue with SQLite due to the ease of the environment.
 
-Nessa aplicação vamos utilizar banco de dados relacional (SQL). Para ambiente de desenvolvimento seguiremos com o SQLite pela facilidade do ambiente.
+During the deployment process, the database will be changed to Postgresql.
 
-### Diagrama ERD
+### ERD Diagram
 
-<img src=".github/erd.svg" width="600" alt="Diagrama ERD do banco de dados" />
+<img src=".github/erd.svg" width="600" alt="Database ERD Diagram" />
 
-### Estrutura do banco (SQL)
+### Database structure (SQL)
 
 ```sql
 -- CreateTable
@@ -80,3 +81,29 @@ CREATE UNIQUE INDEX "attendees_event_id_email_key" ON "attendees"("event_id", "e
 -- CreateIndex
 CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
 ```
+
+## Used Techs
+
+<!-- - Tech 1: Enim sunt minim officia esse elit. -->
+
+# How to run the project
+
+Node version used: v20.9.0
+
+<!-- ## Application
+
+```bash
+# To install project dependencies
+yarn
+```
+
+```bash
+# Run the application on localhost -> http://localhost:5173
+yarn dev
+``` -->
+
+# Author
+
+Made with 💚 by Guilherme Bafica 👋
+
+[![LinkedIn Badge](https://img.shields.io/badge/-GuilhermeBafica-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guilhermebafica/)](https://www.linkedin.com/in/guilhermebafica/)
