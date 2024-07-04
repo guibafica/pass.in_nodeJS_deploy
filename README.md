@@ -84,7 +84,29 @@ CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
 
 ## Used Techs
 
-<!-- - Tech 1: Enim sunt minim officia esse elit. -->
+### API
+
+- Faker-js: A JavaScript library for generating fake data for various data types like names, addresses, emails, and more. It is useful for testing and development purposes.
+- Prisma: An open-source ORM (Object-Relational Mapping) tool for Node.js and TypeScript that simplifies database access and management with an auto-generated, type-safe query builder.
+- Tsup: A zero-config TypeScript bundler for modern JavaScript applications.
+- Tsx: A TypeScript execution environment for Node.js, allowing TypeScript files to be run directly without needing a separate compilation step.
+- Fastify: A highly performant web framework for Node.js, designed for building fast and low-overhead HTTP services.
+- Dayjs: A minimalist JavaScript library for parsing, validating, manipulating, and formatting dates.
+- Zod: A TypeScript-first schema declaration and validation library for JavaScript.
+
+### Deploy
+
+- Docker: A platform that enables developers to automate the deployment of applications inside lightweight, portable containers.
+- Docker Compose: A tool for defining and running multi-container Docker applications.
+- Kubernetes (kubectl): Kubernetes is an open-source container orchestration platform for automating deployment, scaling, and management of containerized applications.
+- K3D: A lightweight wrapper to run Kubernetes (K3s) in Docker.
+- DigitalOcean: A cloud infrastructure provider offering scalable compute, storage, and networking solutions.
+- GitHub Actions: A CI/CD platform integrated into GitHub, allowing users to automate workflows for building, testing, and deploying their code.
+- CI/CD: Stands for Continuous Integration and Continuous Deployment/Delivery.
+- IAC: The practice of managing and provisioning computing infrastructure through machine-readable configuration files, rather than through physical hardware configuration or interactive configuration tools.
+- Lens: A Kubernetes integrated development environment (IDE) that provides a graphical user interface to manage and troubleshoot Kubernetes clusters.
+- Helm: A package manager for Kubernetes that helps define, install, and upgrade complex Kubernetes applications.
+- Terraform: An open-source infrastructure as code tool that allows users to define and provision data center infrastructure using a high-level configuration language.
 
 # How to run the project
 
